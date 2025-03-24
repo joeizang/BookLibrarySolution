@@ -1,7 +1,16 @@
 using BookLibraryManager.Client.Pages;
 using BookLibraryManager.Components;
+using BookLibraryManager.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContextPool<BookManagerContext>(opt =>
+{
+    opt.UseNpgsql("Host=localhost;Database=BookLibraryManager;Username=postgres;Password=postgres", 
+        x => x.UseNodaTime());
+    opt.EnableSensitiveDataLogging();
+});
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
