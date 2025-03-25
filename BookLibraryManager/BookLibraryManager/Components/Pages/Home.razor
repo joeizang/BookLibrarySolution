@@ -1,7 +1,37 @@
 ﻿@page "/"
+@* @inject IJSRuntime js *@
+@* @rendermode InteractiveAuto *@
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1 class="text-4xl text-red-500 font-bold">Hello, world!</h1>
+<br/>
+<br/>
+<br/>
+
+
+<button 
+    class="bg-red-700 hover:bg-red-800 bg border-brown-600 text-white p-4 rounded-2xl"
+    @onclick="CauseAnError">Click Me
+</button>
+<br/>
+<br/>
+<br/>
+        <p class="text-4xl text-pink-700">@result</p>
+<ErrorBoundary>
+    <ChildContent>
+    </ChildContent>
+</ErrorBoundary>
 
 Welcome to your new app.
+
+@code {
+    int result = 0;
+    int zero = 0;
+    private void CauseAnError()
+    {
+        result++;
+        // js.InvokeVoidAsync("alert", "This is an error!");
+    }
+
+}
