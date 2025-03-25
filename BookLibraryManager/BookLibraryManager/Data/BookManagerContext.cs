@@ -25,6 +25,7 @@ public class BookManagerContext : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(Program).Assembly);
         modelBuilder.Entity<AuthorsBooks>()
             .HasKey(ab => new { ab.AuthorId, ab.BookId });
         modelBuilder.Entity<AuthorsPublishers>()
