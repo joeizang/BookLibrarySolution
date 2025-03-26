@@ -1,12 +1,12 @@
 {
-  "name": "BookLibraryManager",
+  "name": "booklibrarymanager",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildcss": "npx @tailwindcss/cli -i wwwroot/app.css -o wwwroot/dist.css",
-    "watchcss": "npx @tailwindcss/cli -i wwwroot/app.css -o wwwroot/dist.css --watch"
+    "buildcss": "npx @tailwindcss/cli -i wwwroot/app.css -o wwwroot/tailwindcss.css",
+    "watchcss": "npx @tailwindcss/cli -i wwwroot/app.css -o wwwroot/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",

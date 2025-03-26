@@ -1,13 +1,18 @@
-﻿<div class="flex flex-row gap-2 text-gray-50">
+﻿<div class="item-center flex w-6/12 flex-row gap-3 rounded-xl border-pink-800 p-2 text-gray-50 shadow shadow-stone-200/50">
   <div>
-    <img src="https://picsum.photos/150" alt="Book Cover" />
+    <img src="https://picsum.photos/150" alt="Book Cover" class="rounded-l-xl"/>
   </div>
-  <div>
+  <div class="space-y-1">
     <h2 class="text-lg font-bold">Book Title</h2>
     <p class="text-sm">Author:</p>
     <p class="text-sm">ISBN :</p>
     <p class="text-sm">Published Date :</p>
+    <div class="mt-1.5 gap-2">
+        <button class="rounded bg-blue-900 px-4 py-2 font-bold text-white hover:bg-blue-800">Edit</button>
+        <button class="rounded bg-red-900 px-4 py-2 font-bold text-white hover:bg-red-800">Delete</button>
+    </div>
   </div>
+  
 </div>
 
 @code {
